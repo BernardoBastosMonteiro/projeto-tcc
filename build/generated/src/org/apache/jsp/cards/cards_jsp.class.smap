@@ -1,0 +1,10 @@
+SMAP
+cards_jsp.java
+JSP
+*S JSP
+*F
++ 0 cards.jsp
+cards/cards.jsp
+*L
+1,43:44
+*E

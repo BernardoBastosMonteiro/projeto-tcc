@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.trip-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+.info-item strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.status-item {
+    flex: 1;
+    position: relative;
+}
+
+.status-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.completed {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.in-progress {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.status-item p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Estilo para indicar progresso */
+
+.status-item:nth-child(1) .status-circle,
+.status-item:nth-child(1) .status-circle::before {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.status-item:nth-child(2) .status-circle,
+.status-item:nth-child(2) .status-circle::before {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.status-item:nth-child(3) .status-circle,
+.status-item:nth-child(3) .status-circle::before {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.status-item:nth-child(4) .status-circle,
+.status-item:nth-child(4) .status-circle::before {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.status-item:nth-child(5) .status-circle,
+.status-item:nth-child(5) .status-circle::before {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.status-circle::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    top: 8px;
+    left: -50%;
+    z-index: -1;
+}
+
+.status-circle.completed::before,
+.status-circle.in-progress::before {
+    background-color: currentColor;
+}
