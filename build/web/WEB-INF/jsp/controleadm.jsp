@@ -15,8 +15,8 @@
         </div>
         <div id="links">
             <a href=""><button>GERENCIAR VIAGENS</button></a>
-            <a href=""><button>ADICIONAR USUARIO</button></a>
-            <a href=""><button>GERENCIAR USUARIO</button></a>
+            <a href="./AdminController"><button>ADICIONAR USUARIO</button></a>
+            <a href="./gerenciarUsuariosController"><button>GERENCIAR USUARIO</button></a>
         </div>
     
 </body>

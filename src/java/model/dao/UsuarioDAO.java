@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import model.bean.UsuarioDTO;
 
 /**
@@ -61,5 +63,37 @@ public class UsuarioDAO {
         }
         
         return user;
+    }
+    public List<UsuarioDTO> listar() {
+        List<UsuarioDTO> usuarios = new ArrayList();
+
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+
+            stmt = conexao.prepareStatement("SELECT * FROM usuarios");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                UsuarioDTO user = new UsuarioDTO();
+                user.setIdUsuario(rs.getInt("id_usuario"));
+                user.setNome(rs.getString("nome"));
+                user.setEmail(rs.getString("email"));
+                user.setSenha(rs.getString("senha"));
+                
+                System.out.println(user.getIdUsuario());
+                System.out.println(user.getNome());
+                
+                usuarios.add(user);
+            }
+            rs.close();
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return usuarios;
     }
 }

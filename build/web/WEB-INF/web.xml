@@ -64,6 +64,22 @@
         <servlet-name>AcompanharController</servlet-name>
         <servlet-class>controler.AcompanharController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GerenciarController</servlet-name>
+        <servlet-class>controler.GerenciarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GerencimentoController</servlet-name>
+        <servlet-class>controler.GerencimentoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>gerenciarUsuariosController</servlet-name>
+        <servlet-class>controler.gerenciarUsuariosController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>controler.AdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -127,6 +143,22 @@
     <servlet-mapping>
         <servlet-name>AcompanharController</servlet-name>
         <url-pattern>/AcompanharController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GerenciarController</servlet-name>
+        <url-pattern>/GerenciarController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GerencimentoController</servlet-name>
+        <url-pattern>/GerencimentoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>gerenciarUsuariosController</servlet-name>
+        <url-pattern>/gerenciarUsuariosController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
